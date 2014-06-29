@@ -18,7 +18,7 @@ function dispReverse() {
    var currNode = this.head;
    currNode = this.findLast();
    while (!(currNode.previous == null)) {
-      console.log(currNode.element);
+      print(currNode.element);
       currNode = currNode.previous;
    }
 }
@@ -54,7 +54,7 @@ function remove(item) {
 function display() {
    var currNode = this.head;
    while (!(currNode.next == null)) {
-      console.log(currNode.next.element);
+      print(currNode.next.element);
       currNode = currNode.next;
    }
 }
@@ -82,8 +82,8 @@ cities.insert("Russellville", "Conway");
 cities.insert("Carlisle", "Russellville");
 cities.insert("Alma", "Carlisle");
 cities.display();
-console.log();
+print();
 cities.remove("Carlisle");
 cities.display();
-console.log();
+print();
 cities.dispReverse();

@@ -9,9 +9,9 @@ var student1 = {
    advised: false
 };
 
-console.log(david.last_name); // displays "Durr"
-console.log(student1["id"]); // displays "1234"
-console.log(student1.courses[1]); displays "English II"
+print(david.last_name); // displays "Durr"
+print(student1["id"]); // displays "1234"
+print(student1.courses[1]); displays "English II"
 student1.advised = true;
 david.age = 50;*/
 function Person(first, middle, last) {
@@ -26,7 +26,7 @@ function initials() {
 }
 
 var aPerson = new Person("John","Quincy","Public");
-console.log("First name: " + aPerson.first);
-console.log("Middle name: " + aPerson.middle);
-console.log("Last name: " + aPerson.last);
-console.log("Initials: " + aPerson.initials());
+print("First name: " + aPerson.first);
+print("Middle name: " + aPerson.middle);
+print("Last name: " + aPerson.last);
+print("Initials: " + aPerson.initials());
