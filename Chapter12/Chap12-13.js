@@ -27,13 +27,13 @@ function mergeArrays(arr, startLeft, stopLeft, startRight, stopRight) {
       rightArr[i] = arr[k];
       ++k;
    }
-   
+
    k = startLeft;
    for (var i = 0; i < (leftArr.length-1); ++i) {
       leftArr[i] = arr[k];
       ++k;
    }
-  
+
    rightArr[rightArr.length-1] = Infinity; // a sentinel value
    leftArr[leftArr.length-1] = Infinity; // a sentinel value
    var m = 0;

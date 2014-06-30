@@ -25,7 +25,7 @@ function CArray(numElements) {
 
 function setData() {
    for (var i = 0; i < this.numElements; ++i) {
-      this.dataStore[i] = Math.floor(Math.random() * 
+      this.dataStore[i] = Math.floor(Math.random() *
                           (this.numElements+1));
    }
 }
@@ -77,10 +77,10 @@ function selectionSort() {
    var min, temp;
    for (var outer = 0; outer <= this.dataStore.length-2; ++outer) {
       min = outer;
-      for (var inner = outer + 1; 
-           inner <= this.dataStore.length-1; ++inner) {         
+      for (var inner = outer + 1;
+           inner <= this.dataStore.length-1; ++inner) {
          if (this.dataStore[inner] < this.dataStore[min]) {
-            min = inner;  
+            min = inner;
          }
       }
       swap(this.dataStore, outer, min);
@@ -106,8 +106,8 @@ function shellsort() {
    for (var g = 0; g < this.gaps.length; ++g) {
       for (var i = this.gaps[g]; i < this.dataStore.length; ++i) {
          var temp = this.dataStore[i];
-         for (var j = i; j >= this.gaps[g] && 
-                         this.dataStore[j-this.gaps[g]] > temp; 
+         for (var j = i; j >= this.gaps[g] &&
+                         this.dataStore[j-this.gaps[g]] > temp;
               j -= this.gaps[g]) {
             this.dataStore[j] = this.dataStore[j - this.gaps[g]];
          }
@@ -147,13 +147,13 @@ function mergeArrays(arr, startLeft, stopLeft, startRight, stopRight) {
       rightArr[i] = arr[k];
       ++k;
    }
-   
+
    k = startLeft;
    for (var i = 0; i < (leftArr.length-1); ++i) {
       leftArr[i] = arr[k];
       ++k;
    }
-  
+
    rightArr[rightArr.length-1] = Infinity; // a sentinel value
    leftArr[leftArr.length-1] = Infinity; // a sentinel value
    var m = 0;
