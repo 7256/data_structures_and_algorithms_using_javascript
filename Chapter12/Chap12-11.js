@@ -15,7 +15,7 @@ function shellsort1() {
    }
 }
 
-load("CArray.js")
+load("CArray.js");
 var nums = new CArray(100);
 nums.setData();
 print("Before Shellsort1: \n");

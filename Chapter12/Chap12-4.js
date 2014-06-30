@@ -1,3 +1,4 @@
+load("CArray.js");
 var numElements = 10;
 var mynums = new CArray(numElements);
 mynums.setData();
