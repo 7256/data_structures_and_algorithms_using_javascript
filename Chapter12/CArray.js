@@ -81,7 +81,7 @@ function bubbleSort() {
 
 // Example 12-6, the selection sort
 function selectionSort() {
-   var min, temp;
+   var min;
    for (var outer = 0; outer <= this.dataStore.length-2; ++outer) {
       min = outer;
       for (var inner = outer + 1;
@@ -91,6 +91,7 @@ function selectionSort() {
          }
       }
       swap(this.dataStore, outer, min);
+      print(this.toString()); // for Figure12-2.js
    }
 }
 
@@ -105,6 +106,7 @@ function insertionSort() {
          --inner;
       }
       this.dataStore[inner] = temp;
+      print(this.toString()); // for Figure12-2.5.js
    }
 }
 
@@ -119,6 +121,9 @@ function shellsort() {
             this.dataStore[j] = this.dataStore[j - this.gaps[g]];
          }
          this.dataStore[j] = temp;
+
+         print(this.gaps[g] + ":");
+         print(this.toString()); // for Figure12-3.js
       }
    }
 }
