@@ -23,10 +23,19 @@ function CArray(numElements) {
    }
 }
 
-function setData() {
-   for (var i = 0; i < this.numElements; ++i) {
-      this.dataStore[i] = Math.floor(Math.random() *
-                          (this.numElements+1));
+function setData(order) {
+   if (order === 1) { // already numeric order
+   }
+   else if (order === -1) { // reverse numeric order
+      for (var i = 0; i < this.numElements; ++i) {
+         this.dataStore[i] = this.numElements - i;
+      }
+   }
+   else { // random numbers
+      for (var i = 0; i < this.numElements; ++i) {
+         this.dataStore[i] = Math.floor(Math.random() *
+                             (this.numElements + 1));
+      }
    }
 }
 
