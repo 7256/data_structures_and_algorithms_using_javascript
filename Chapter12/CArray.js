@@ -116,6 +116,10 @@ function shellsort() {
    }
 }
 
+function setGaps(arr) {
+   this.gaps = arr;
+}
+
 // Example 12-13, a bottom-up merge sort JS implementation
 // Example 12-14, merge sort added to the CArray class
 function mergeSort(arr) {
